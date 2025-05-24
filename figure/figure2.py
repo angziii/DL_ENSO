@@ -135,8 +135,8 @@ for i in range(0,23,1):
       cor_cm4[int(i),int(j-1)]  = np.corrcoef(pick_lab[0:num],pick_cm4[0:num])[0,1]
       cor_ccsm3[int(i),int(j-1)]  = np.corrcoef(pick_lab[0:num],pick_ccsm3[0:num])[0,1]
       cor_ccsm4[int(i),int(j-1)]  = np.corrcoef(pick_lab[0:num],pick_ccsm4[0:num])[0,1]
-      cor_aer04[int(i),int(j-1)]  = np.corrcoef(pick_lab[0:num],pick_aer04[0:num])[0,1]
-nt(i),int(j-1)]  = np.corrcoef(pick_lab[0:num],pick_flora[0:num])[0,1]
+      cor_aer04[int(i), int(j - 1)] = np.corrcoef(pick_lab[0:num], pick_aer04[0:num])[0, 1]
+      cor_flora[int(i), int(j - 1)] = np.corrcoef(pick_lab[0:num], pick_flora[0:num])[0, 1]
       cor_florb[int(i),int(j-1)]  = np.corrcoef(pick_lab[0:num],pick_florb[0:num])[0,1]
 
 

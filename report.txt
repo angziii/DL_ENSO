@@ -1,0 +1,303 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 9 files
+Detected 3 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: CNN/sample_py/nino_type.train_cmip.py
+--------------------------------------------------------------------------------
+CNN/sample_py/nino_type.train_cmip.py:143:16: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: CNN/sample_py/nino34.train_cmip.py
+--------------------------------------------------------------------------------
+CNN/sample_py/nino34.train_cmip.py:118:16: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: CNN/sample_py/nino34.train_transfer.py
+--------------------------------------------------------------------------------
+CNN/sample_py/nino34.train_transfer.py:115:16: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'CNN/sample_py'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'CNN/sample_py/nino34.valid.py'
+ outputting to 'CNN/sample_transfered/nino34.valid.py'
+--------------------------------------------------------------------------------
+
+24:23: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+27:23: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+43:6: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+57:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+58:18: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+61:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+61:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+62:7: INFO: Added keywords to args of function 'tf.nn.max_pool'
+62:7: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+62:7: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+63:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+65:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+65:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+66:7: INFO: Added keywords to args of function 'tf.nn.max_pool'
+66:7: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+66:7: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+67:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+69:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+69:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+71:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+74:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+78:8: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+79:9: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+83:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+84:4: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'CNN/sample_py/nino34.heatmap.py'
+ outputting to 'CNN/sample_transfered/nino34.heatmap.py'
+--------------------------------------------------------------------------------
+
+21:23: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+24:23: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+40:4: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+54:14: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+55:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+58:6: INFO: Added keywords to args of function 'tf.nn.conv2d'
+58:6: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+60:5: INFO: Added keywords to args of function 'tf.nn.max_pool'
+60:5: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+60:5: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+61:5: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+63:6: INFO: Added keywords to args of function 'tf.nn.conv2d'
+63:6: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+65:5: INFO: Added keywords to args of function 'tf.nn.max_pool'
+65:5: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+65:5: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+66:5: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+68:6: INFO: Added keywords to args of function 'tf.nn.conv2d'
+68:6: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+71:5: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+74:5: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+78:8: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+80:9: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+84:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+85:4: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'CNN/sample_py/nino34.ensmean.py'
+ outputting to 'CNN/sample_transfered/nino34.ensmean.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'CNN/sample_py/nino_type.train_cmip.py'
+ outputting to 'CNN/sample_transfered/nino_type.train_cmip.py'
+--------------------------------------------------------------------------------
+
+27:23: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+30:23: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+53:6: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+54:6: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+68:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+69:18: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+71:19: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+74:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+74:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+75:7: INFO: Added keywords to args of function 'tf.nn.max_pool'
+75:7: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+75:7: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+76:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+78:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+78:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+79:7: INFO: Added keywords to args of function 'tf.nn.max_pool'
+79:7: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+79:7: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+80:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+82:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+82:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+84:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+87:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+91:24: INFO: Changing labels arg of tf.nn.softmax_cross_entropy_with_logits to tf.stop_gradient(labels). Please check this transformation.
+
+93:13: INFO: Renamed 'tf.train.RMSPropOptimizer' to 'tf.compat.v1.train.RMSPropOptimizer'
+98:8: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+99:9: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+103:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+104:4: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+143:16: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'CNN/sample_py/nino_type.valid.py'
+ outputting to 'CNN/sample_transfered/nino_type.valid.py'
+--------------------------------------------------------------------------------
+
+20:23: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+23:23: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+37:6: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+51:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+52:18: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+55:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+55:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+56:7: INFO: Added keywords to args of function 'tf.nn.max_pool'
+56:7: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+56:7: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+57:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+59:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+59:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+60:7: INFO: Added keywords to args of function 'tf.nn.max_pool'
+60:7: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+60:7: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+61:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+63:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+63:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+65:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+68:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+73:8: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+74:9: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+78:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'CNN/sample_py/nino34.train_cmip.py'
+ outputting to 'CNN/sample_transfered/nino34.train_cmip.py'
+--------------------------------------------------------------------------------
+
+25:23: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+28:23: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+50:6: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+51:6: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+65:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+66:18: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+69:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+69:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+70:7: INFO: Added keywords to args of function 'tf.nn.max_pool'
+70:7: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+70:7: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+71:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+73:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+73:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+74:7: INFO: Added keywords to args of function 'tf.nn.max_pool'
+74:7: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+74:7: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+75:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+77:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+77:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+79:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+82:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+86:24: INFO: Renamed 'tf.squared_difference' to 'tf.math.squared_difference'
+88:13: INFO: Renamed 'tf.train.RMSPropOptimizer' to 'tf.compat.v1.train.RMSPropOptimizer'
+91:8: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+92:9: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+96:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+97:4: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+118:16: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'CNN/sample_py/nino_type.heatmap.py'
+ outputting to 'CNN/sample_transfered/nino_type.heatmap.py'
+--------------------------------------------------------------------------------
+
+20:23: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+23:23: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+39:4: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+53:14: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+54:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+57:6: INFO: Added keywords to args of function 'tf.nn.conv2d'
+57:6: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+59:5: INFO: Added keywords to args of function 'tf.nn.max_pool'
+59:5: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+59:5: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+60:5: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+62:6: INFO: Added keywords to args of function 'tf.nn.conv2d'
+62:6: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+64:5: INFO: Added keywords to args of function 'tf.nn.max_pool'
+64:5: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+64:5: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+65:5: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+67:6: INFO: Added keywords to args of function 'tf.nn.conv2d'
+67:6: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+70:5: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+73:5: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+78:8: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+79:9: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+83:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'CNN/sample_py/nino_type.ensmean.py'
+ outputting to 'CNN/sample_transfered/nino_type.ensmean.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'CNN/sample_py/nino34.train_transfer.py'
+ outputting to 'CNN/sample_transfered/nino34.train_transfer.py'
+--------------------------------------------------------------------------------
+
+25:23: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+28:23: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+50:6: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+51:6: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+65:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+66:18: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+69:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+69:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+70:7: INFO: Added keywords to args of function 'tf.nn.max_pool'
+70:7: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+70:7: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+71:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+73:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+73:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+74:7: INFO: Added keywords to args of function 'tf.nn.max_pool'
+74:7: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+74:7: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+75:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+77:16: INFO: Added keywords to args of function 'tf.nn.conv2d'
+77:16: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+79:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+82:7: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+86:24: INFO: Renamed 'tf.squared_difference' to 'tf.math.squared_difference'
+88:13: INFO: Renamed 'tf.train.RMSPropOptimizer' to 'tf.compat.v1.train.RMSPropOptimizer'
+91:8: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+92:9: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+96:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+115:16: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
