@@ -1,3 +1,5 @@
+# Updated for tensorflow 2.0+
+
 ## Directory
 
 - CNN: source code for ENSO forecast
